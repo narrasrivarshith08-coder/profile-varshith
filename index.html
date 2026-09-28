@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Varshith | Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Inter for a clean, developer-focused typographic aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav id="navbar">
+        <a href="#home" class="nav-logo">Sri Varshith</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
+            <a href="#work">My Work</a>
+            <a href="#tech">Tech Stack</a>
+            <a href="#journey">Journey</a>
+            <a href="#beyond">Beyond Code</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="mobile-menu-btn" id="menuBtn">☰</button>
+    </nav>
+
+    <main>
+        <section id="home" class="container">
+            <div class="hero-content">
+                <span class="hero-small">HELLO, I'M</span>
+                <h1 class="hero-title">SRI VARSHITH</h1>
+                <h2 class="hero-subtitle">Student / Developer / Problem Solver</h2>
+                <p class="hero-desc">Exploring code, building for the web, and experimenting with AI from Hyderabad.</p>
+                <div class="hero-btns">
+                    <a href="#work" class="btn btn-primary interactive-elem">Explore My Work</a>
+                    <a href="#journey" class="btn btn-secondary interactive-elem">My Journey</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Desktop Sticky Scroll Implementation -->
+        <section id="work">
+            <div class="container work-header reveal">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">Things I've built, experimented with, and learned from.</p>
+            </div>
+            
+            <!-- Scrolling container that takes up 500vh (for 5 projects) -->
+            <div class="work-trigger-container" id="workContainer">
+                
+                <!-- The sticky visual layer -->
+                <div class="work-sticky container" id="workSticky">
+                    <div class="work-layout">
+                        <div class="work-left" id="workLeft">
+                            <!-- Dynamic Content Injected via JS -->
+                            <div class="work-number" id="wNum">01 / 05</div>
+                            <h3 class="work-project-title" id="wTitle">Personal Portfolio</h3>
+                            <p class="work-project-desc" id="wDesc">A responsive portfolio website created to showcase my projects, skills, and journey.</p>
+                            <div class="work-tags" id="wTags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="#" class="view-project-link interactive-elem">VIEW PROJECT <i>→</i></a>
+                        </div>
+                        <div class="work-right interactive-elem" id="workRight">
+                            <div class="work-visual-placeholder" id="wVisual">Portfolio Concept</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The invisible trigger segments -->
+                <div class="work-triggers">
+                    <div class="work-trigger-step" data-index="0"></div>
+                    <div class="work-trigger-step" data-index="1"></div>
+                    <div class="work-trigger-step" data-index="2"></div>
+                    <div class="work-trigger-step" data-index="3"></div>
+                    <div class="work-trigger-step" data-index="4"></div>
+                </div>
+            </div>
+            
+            <!-- Mobile Fallback (Hidden on desktop via JS) -->
+            <div id="mobileWorkFallback" style="display: none;" class="container">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <section id="tech" class="container">
+            <h2 class="section-title reveal">Tech Stack</h2>
+            <p class="section-subtitle reveal">Tools I'm learning, using, and exploring.</p>
+            
+            <div class="tech-cloud reveal interactive-elem">
+                <span class="tech-item" data-desc="Building the structure of the web.">HTML</span>
+                <span class="tech-item" data-desc="Designing interfaces and bringing ideas to life.">CSS</span>
+                <span class="tech-item" data-desc="Adding interaction and behavior.">JavaScript</span>
+                <span class="tech-item" data-desc="Strengthening programming and problem-solving fundamentals.">Java</span>
+                <span class="tech-item" data-desc="Exploring programming and AI-related workflows.">Python</span>
+                <span class="tech-item" data-desc="Learning version control and better development workflows.">Git</span>
+                <span class="tech-item" data-desc="Collaborating and sharing code.">GitHub</span>
+                <span class="tech-item" data-desc="Experimenting with AI to learn and build faster.">AI Tools</span>
+            </div>
+            
+            <div class="tech-display-area reveal">
+                <p class="tech-desc" id="techDesc">Hover over a technology to see how I use it.</p>
+            </div>
+        </section>
+
+        <section id="journey" class="container">
+            <h2 class="section-title reveal">My Journey</h2>
+            <p class="section-subtitle reveal">The destination changed. The curiosity didn't.</p>
+
+            <div class="timeline-container" id="timelineContainer">
+                <div class="timeline-line-bg"></div>
+                <div class="timeline-line-progress" id="timelineProgress"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">01 — IIT</div>
+                    <h3 class="timeline-title">The Initial Goal</h3>
+                    <p class="timeline-desc">I spent a major part of my academic journey working toward the goal of getting into IIT.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">02 — The Turning Point</div>
+                    <h3 class="timeline-title">A Change in Direction</h3>
+                    <p class="timeline-desc">I didn't get into IIT. It wasn't the destination I had imagined, but it became a point where I started looking at technology differently.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">03 — Programming</div>
+                    <h3 class="timeline-title">Building Fundamentals</h3>
+                    <p class="timeline-desc">Started strengthening programming fundamentals, Java, loops, functions, problem solving, and competitive programming.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">04 — Web Development</div>
+                    <h3 class="timeline-title">Discovering the Web</h3>
+                    <p class="timeline-desc">Started learning HTML, CSS, JavaScript and building websites.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">05 — AI Exploration</div>
+                    <h3 class="timeline-title">The New Frontier</h3>
+                    <p class="timeline-desc">Started exploring AI tools and discovering how they can change the way we learn and build.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">06 — Now</div>
+                    <h3 class="timeline-title">Continuous Growth</h3>
+                    <p class="timeline-desc">Building projects, improving problem-solving skills, and learning something new every day.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="beyond" class="container">
+            <h2 class="section-title reveal">Beyond Code</h2>
+            
+            <div class="beyond-grid reveal">
+                <div class="beyond-word-container interactive-elem">
+                    <div class="beyond-word">BUILD</div>
+                    <div class="beyond-text">I like turning ideas into something people can actually interact with.</div>
+                </div>
+                <div class="beyond-word-container interactive-elem">
+                    <div class="beyond-word">SOLVE</div>
+                    <div class="beyond-text">Competitive programming is helping me think more logically.</div>
+                </div>
+                <div class="beyond-word-container interactive-elem">
+                    <div class="beyond-word">LEARN</div>
+                    <div class="beyond-text">I'm constantly learning new technologies and improving my fundamentals.</div>
+                </div>
+                <div class="beyond-word-container interactive-elem">
+                    <div class="beyond-word">EXPLORE</div>
+                    <div class="beyond-text">AI is one of the areas I'm currently experimenting with.</div>
+                </div>
+            </div>
+
+            <div class="currently-section reveal">
+                <h3 class="currently-title">Currently</h3>
+                <div class="currently-list">
+                    <div class="currently-item">
+                        <span class="currently-label">Learning</span>
+                        <span class="currently-value">Java + Problem Solving</span>
+                    </div>
+                    <div class="currently-item">
+                        <span class="currently-label">Building</span>
+                        <span class="currently-value">Web Projects</span>
+                    </div>
+                    <div class="currently-item">
+                        <span class="currently-label">Exploring</span>
+                        <span class="currently-value">AI Tools</span>
+                    </div>
+                    <div class="currently-item">
+                        <span class="currently-label">Improving</span>
+                        <span class="currently-value">Competitive Programming</span>
+                    </div>
+                    <div class="currently-item">
+                        <span class="currently-label">Goal</span>
+                        <span class="currently-value">Become a stronger developer.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title reveal">Contact</h2>
+            <h3 class="section-heading reveal" style="font-size: clamp(2rem, 4vw, 3rem);">LET'S BUILD SOMETHING</h3>
+            <p class="section-subtitle reveal">Have an idea, want to collaborate, or just want to talk about technology?</p>
+
+            <div class="contact-layout reveal">
+                <div class="contact-info">
+                    <a href="mailto:hello@srivarshith.com" class="contact-link interactive-elem">Email ↗</a>
+                    <a href="#" class="contact-link interactive-elem">GitHub ↗</a>
+                    <a href="#" class="contact-link interactive-elem">LinkedIn ↗</a>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Name" required class="interactive-elem">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required class="interactive-elem">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="Message" required class="interactive-elem"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn interactive-elem">Send Message</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div>Sri Varshith</div>
+        <div>"Designed & built with curiosity."</div>
+        <div>Hyderabad, India &bull; 2026</div>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
